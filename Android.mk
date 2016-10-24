@@ -4,7 +4,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 IGNORED_WARNINGS := -Wno-sign-compare -Wno-unused-parameter -Wno-sign-promo -Wno-error=return-type
 LOCAL_CFLAGS     := -DLOG_TAG=\"protobuf_battery\" -O2 -DGOOGLE_PROTOBUF_NO_RTTI
-LOCAL_PBUF_INTERMEDIATES := $(call intermediates-dir-for,STATIC_LIBRARIES,libcppsensors_packet_static,,)/proto/external/aic/libaicd/
+LOCAL_PBUF_INTERMEDIATES := $(call generated-sources-dir-for,STATIC_LIBRARIES,libcppsensors_packet_static,,)/proto/external/aic/libaicd/
 LOCAL_STATIC_LIBRARIES := liblog libcutils libstlport_static libprotobuf-cpp-2.3.0-full libcppsensors_packet_static
 LOCAL_C_INCLUDES := \
 					bionic \
